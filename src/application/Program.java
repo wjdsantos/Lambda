@@ -16,9 +16,8 @@ public class Program {
 		list.add(new Product("Notebook", 1200.00));
 		list.add(new Product("Tablet", 450.00));
 		
-		Comparator<Product> comp = (p1, p2) -> {
-			return p1.getName().toUpperCase().compareTo(p2.getName().toUpperCase()); 
-		}; //Implementacao de objeto Comparator em expressao Lambda com chaves '{}'
+		Comparator<Product> comp = (p1, p2) -> p1.getName().toUpperCase().compareTo(p2.getName().toUpperCase()); 
+		//Como a implementacao foi feita em uma única linha, posso dispensar as chaves '{}' e palavra 'return'
 		
 		list.sort(comp); 
 		
